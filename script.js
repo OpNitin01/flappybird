@@ -5,7 +5,7 @@
       const rect = canvas.getBoundingClientRect();
       const ratio = Math.min(window.devicePixelRatio || 1, 2);
       canvas.width = Math.floor(rect.width * ratio);
-      canvas.height = Math.floor(rect.width * 1 * ratio);
+      canvas.height = Math.floor(rect.width * ratio);
       ctx.setTransform(ratio,0,0,ratio,0,0);
     }
     window.addEventListener('resize', resizeCanvas);
@@ -27,7 +27,7 @@
     // pipes
     const pipes = [];
     let pipeTimer = 0;
-    let pipeGap = 220; // gap height
+    let pipeGap = canvas.height * 0.30; // gap height
     const pipeWidth = 75;
 
     // ground
