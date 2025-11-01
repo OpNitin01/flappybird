@@ -1,0 +1,19 @@
+:root{--bg:#090a3d;--pipe:#2aa34a;--bird:#ffdd57;--panel:rgba(255,255,255,0.06);--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#ffffff;background:var(--bg)}
+    .wrap{max-width:980px;margin:12px auto;padding:12px;display:grid;grid-template-columns:1fr 320px;gap:12px}
+    @media (max-width:880px){.wrap{grid-template-columns:1fr;max-width:720px;padding:8px}}
+    .game-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:12px;padding:12px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+    canvas{width:100%;height:auto;border-radius:8px;background:linear-gradient(180deg,#70c5ce 0%, #66bfc8 100%);display:block}
+    .sidebar{display:flex;flex-direction:column;gap:10px}
+    .panel{background:var(--panel);border-radius:10px;padding:12px;border:1px solid var(--glass)}
+    h1{margin:0;font-size:18px}
+    .meta{display:flex;justify-content:space-between;align-items:center}
+    .bigScore{font-size:28px;font-weight:800;color:#ffffff;text-shadow:0 2px 6px rgba(0,0,0,0.2)}
+    .muted{opacity:0.8;font-size:13px}
+    .controls{display:flex;gap:8px;margin-top:8px}
+    button{color:white;background:transparent;border:1px solid rgb(255, 255, 255);padding:10px;border-radius:8px;font-weight:700}
+    .touch-hint{display:none}
+    button:hover{cursor: pointer;}
+    @media (max-width:880px){.touch-hint{display:block;margin-top:8px}}
+    footer{font-size:13px;color:rgba(255, 255, 255, 0.6);text-align:center;margin-top:8px}

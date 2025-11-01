@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Flappy Flight — Responsive Flappy Bird</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="game-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div>
+          <h1>Flappy Flight</h1>
+          <div class="muted">Tap or press Space/Up to flap. Works on phones, tablets and desktops.</div>
+        </div>
+        <div>
+          <div class="bigScore" id="uiScore">0</div>
+          <div style="text-align:right" class="muted">Best: <span id="uiBest">0</span></div>
+        </div>
+      </div>
+
+      <canvas id="c" width="800" height="600"></canvas>
+
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:10px">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="touch-hint muted">Tip: On mobile tap anywhere to flap. Hold to repeatedly flap. Use left/right edge taps to move horizontally.</div>
+    </div>
+
+    <div class="sidebar">
+      <div class="panel">
+        <strong>How to play</strong>
+        <ol style="margin-top:8px">
+          <li>Tap / press Space / Up to flap upward.</li>
+          <li>Navigate the bird through the gaps in the pipes.</li>
+          <li>Score increases by passing pipes. Every 10 points speed increases slightly.</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <strong>Settings</strong>
+        <div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
+          <label><input type="checkbox" id="audioToggle" checked> Sound</label>
+          <label>Difficulty: <select id="difficulty"><option value="1">Easy</option><option value="1.25">Normal</option><option value="1.5">Hard</option></select></label>
+        </div>
+      </div>
+
+      <div class="panel">
+        <strong>Controls</strong>
+        <div class="muted" style="margin-top:6px">Space / ↑ = flap. Mouse / Touch = flap. Buttons for start/pause/reset.</div>
+      </div>
+
+      <footer>Made with HTML, CSS & JS — Responsive & mobile-friendly</footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
